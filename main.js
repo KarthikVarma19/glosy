@@ -1,5 +1,3 @@
-
-
 function localStorageClear() {
   localStorage.removeItem('recentWords');
   document.getElementById("recentContainers").innerHTML = "";
