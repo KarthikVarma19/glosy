@@ -1,1 +1,184 @@
+<!doctype html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dictionary App</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+  <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!--Displaying Navbar in Medium-->
+  <nav class="bg-white border-gray-600 dark:bg-gray-900 shadow-sm">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-2">
+      <a class="flex items-center space-x-3 rtl:space-x-reverse">
+        <img src="https://cdn-icons-png.freepik.com/512/5402/5402392.png" class="h-10" alt="Glossy Logo" />
+        <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-dark">Glosy</span>
+      </a>
+      <div>
+        <h3
+          class="m-2 text-1xl font-bold leading-none tracking-tight text-black-600 md:text-1xl lg:text-2xl dark:text-dark d-none d-md-block">
+          Your go-to dictionary app
+        </h3>
+      </div>
+      <div class="d-none d-md-block">
+        <div class="nav nav-tabs text-dark-500 dark:text-dark-400" id="nav-tab" role="tablist">
+          <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
+            type="button" role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+
+          <button class="nav-link" id="nav-word-of-the-day-tab" data-bs-toggle="tab" data-bs-target="#nav-word"
+            type="button" role="tab" aria-controls="nav-word" aria-selected="false">Word Of The Day</button>
+
+          <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+            role="tab" aria-controls="nav-profile" aria-selected="false">Recent</button>
+
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!--Displaying in Small Devices Nav Bar-->
+  <div class="d-md-none">
+    <div class="nav nav-tabs text-dark-500 dark:text-dark-400 d-flex flex-row justify-content-between" id="nav-tab"
+      role="tablist">
+      <button class="nav-link active " id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home" type="button"
+        role="tab" aria-controls="nav-home" aria-selected="true">Home</button>
+
+      <button class="nav-link" id="nav-word-of-the-day-tab" data-bs-toggle="tab" data-bs-target="#nav-word"
+        type="button" role="tab" aria-controls="nav-word" aria-selected="false">Word Of The Day</button>
+
+      <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
+        role="tab" aria-controls="nav-profile" aria-selected="false">Recent</button>
+
+    </div>
+  </div>
+  <!--Tab Control-->
+  <div class="tab-content" id="nav-tabContent">
+    <!--Home Tab-->
+    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">
+
+      <div class="center">
+        <div class="searchBox">
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" id="searchInput" type="search" placeholder="Feel free to Search Here..."
+              aria-label="Search">
+            <button class="btn btn-outline-success" type="submit" id="searchButton">Search</button>
+          </form>
+        </div>
+        <div class="container my-5">
+          <div class="row">
+            <div class="d-flex flex-row justify-content-start">
+              <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-book"
+                viewBox="0 0 16 16">
+                <path
+                  d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+                </path>
+              </svg>
+              <h1 id="searchWordText" class="font-bold m-2 fs-4">Your Word Will Appear Here</h1>
+
+
+
+            </div>
+          </div>
+          <!--Displaying the Content After Fetched-->
+
+          <div class="col-lg-8 px-0">
+            <p class="fs-6" id="definition">Welcome to MyDictionaryApp. Type your favorite word in the Search Bar at
+              the top
+              right you will see the meaning here.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+    </div>
+
+    <!--Word of the Day-->
+    <div class="tab-pane fade" id="nav-word" role="tabpanel" aria-labelledby="nav-word-of-the-day-tab" tabindex="1">
+
+      <div class="container my-5">
+        <div class="row">
+          <div class="d-flex flex-row justify-content-start">
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-book"
+              viewBox="0 0 16 16">
+              <path
+                d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783">
+              </path>
+            </svg>
+            <h1 id="TextInWordOfTheDay" class="font-bold m-2 fs-4"> 
+
+              
+            </h1>
+
+
+
+          </div>
+        </div>
+        <div class="col-lg-8 px-0">
+          <p class="fs-6" id="definitionInWordOfTheDay">
+
+
+
+          </p>
+        </div>
+      </div>
+
+    </div>
+    <!--Recent Tab-->
+    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="2">
+      <!--Show All the Recently Searched Words Here-->
+      <div id="recentTabsContainer">
+        <div class="bottom-fixed text-right m-3">
+          <button class="btn btn-danger" onclick="localStorageClear()">Clear All</button>
+        </div>
+        <div class='container'>
+          <div class='row m-auto' id='recentContainers'>
+
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+  <footer
+    class="fixed bottom-0 left-0 z-20 w-full p-3 bg-white shadow-lg md:flex md:items-center md:justify-between md:p-4 dark:bg-white-800 ">
+    <span class="text-sm text-dark-500 sm:text-center dark:text-dark-400"><a href="" class="hover:underline"
+        id="footerYear"></a>. All Rights Reserved.
+    </span>
+    <ul class="flex flex-wrap items-center mt-3 text-sm font-medium text-dark-500 dark:text-dark-400 sm:mt-0">
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">About</a>
+      </li>
+      <li>
+        <a href="#" class="hover:underline me-4 md:me-6">GitHub</a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/karthikvarmaganaraju/" target='_blank'
+          class="hover:underline me-4 md:me-6">LinkedIn</a>
+      </li>
+      <li>
+        <a href="mailto:ganarajukarthikvarma1635@gmail.com" class="hover:underline">Contact</a>
+      </li>
+    </ul>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="main.js"></script>
+</body>
+
+</html>
